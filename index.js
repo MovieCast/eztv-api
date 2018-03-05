@@ -70,21 +70,21 @@ class eztvAPI {
      */
 
     /**
-     * Fetch the list of shows
+     * Fetch the list of show torrents
      * @param {eztvOptions} options eztv API request options
-     * @returns {Promise<eztvResponse>} List of shows from eztv
+     * @returns {Promise<eztvResponse>} List of show torrents from eztv
      */
-    getShows({
+    getTorrents({
         limit = 50,
         page = 1,
         imdb_id = ''
     } = {}) {
         if (!~~limit || limit < 1 || limit > 100) {
-            throw new Error(`Limit out of range, must be a number between 1 and 100`)
+            throw new Error(`${limit} is not a valid value for limit, expected a number in the range of 1 - 100!`)
         }
 
         if (!~~page || page < 1) {
-            throw new Error('Page must be a number greater than zero')
+            throw new Error(`${page} is not a valid value for page, expected a number greater then 0!`)
         }
 
         return this._get('get-torrents', { limit, page, imdb_id });

@@ -1,19 +1,42 @@
 {
   "name": "@moviecast/eztv-api",
   "version": "0.0.1",
-  "description": "eztv API wrapper for MovieCast scraper",
+  "description": "A wrapper for EZTV used by our scraper",
   "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/mocha --timeout 15000 test/**"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MovieCast/eztv-api.git"
   },
   "keywords": [
     "eztv",
     "api",
-    "wrapper"
+    "wrapper",
+    "shows"
   ],
   "author": "VVLNT",
+  "contributors": [
+    {
+      "name": "Dizzy",
+      "email": "itsdizzy40@gmail.com",
+      "url": "https://moviecast.xyz"
+    }
+  ],
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MovieCast/eztv-api/issues"
+  },
+  "homepage": "https://github.com/MovieCast/eztv-api#readme",
   "dependencies": {
     "got": "^8.2.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^3.5.2"
   }
 }
