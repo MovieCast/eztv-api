@@ -1,0 +1,19 @@
+{
+  "name": "@moviecast/eztv-api",
+  "version": "0.0.1",
+  "description": "eztv API wrapper for MovieCast scraper",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "eztv",
+    "api",
+    "wrapper"
+  ],
+  "author": "VVLNT",
+  "license": "MIT",
+  "dependencies": {
+    "got": "^8.2.0"
+  }
+}

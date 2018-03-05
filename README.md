@@ -1,2 +1,3 @@
 # eztv-api
-EZTV API which is used in our scraper
+
+Wrapper for eztv's API for use in MovieCast scraper
