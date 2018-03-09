@@ -3,11 +3,10 @@
   "version": "0.0.1",
   "description": "A wrapper for EZTV used by our scraper",
   "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
   "scripts": {
-    "test": "./node_modules/.bin/mocha --timeout 15000 test/**"
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
+    "lint": "eslint {test}/** *.js",
+    "test": "nyc -r=text -r=lcov mocha --timeout 15000 --exit"
   },
   "repository": {
     "type": "git",
@@ -37,6 +36,11 @@
   },
   "devDependencies": {
     "chai": "^4.1.2",
-    "mocha": "^5.0.1"
+    "coveralls": "^3.0.0",
+    "eslint": "^4.18.2",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.9.0",
+    "mocha": "^5.0.1",
+    "nyc": "^11.4.1"
   }
 }
