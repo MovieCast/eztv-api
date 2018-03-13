@@ -17,3 +17,6 @@ scripts:
 
 after_success:
   - npm run coveralls
+
+notifications:
+  webhooks: http://travis.moviecast.xyz/webhook
